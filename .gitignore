@@ -1,0 +1,63 @@
+# 1. Compilation Outputs and Binary Files
+# These files can be regenerated upon compilation and should not be tracked by Git.
+
+# Common build directories
+/bin/
+/build/
+/out/
+/dist/
+
+# Rust-specific build directory
+/target/
+
+# Common object and library files
+*.o
+*.a
+*.so
+*.dll
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# 2. Dependencies and Package Management
+# Dependency folders that can be recreated by running a package manager command.
+# For example, if using CMake to manage dependencies, these might be in a build folder (already excluded).
+# If you introduce a vendor folder for C/C++ dependencies:
+# /vendor/ 
+
+# 3. Environment Variables and Sensitive Data
+# Configuration files that contain secrets or machine-specific paths.
+.env
+.env.local
+config.local.ini
+credentials.json
+.vscode-credentials
+
+# 4. Editor and IDE Configuration Files
+# These are personal preferences or temporary files that should not be shared across collaborators.
+
+# Visual Studio Code (VS Code)
+.vscode/
+
+# JetBrains IDEs (IntelliJ, CLion, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Visual Studio (Windows)
+*.vcxproj.user
+*.sln.docstates
+*.suo
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# 5. Operating System Temporary Files
+.DS_Store    # macOS
+Thumbs.db    # Windows
