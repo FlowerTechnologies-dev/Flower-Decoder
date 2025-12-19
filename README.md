@@ -1,43 +1,26 @@
-# 🌸 Flower Decoder
+# 🌸 Flower Decoder v1.3 - Stable
 
-![Version](https://img.shields.io/badge/version-v1.2--alpha-pink)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
-![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
+The official decoder for **Flower Formats** (.ftf, .fpf). A core part of the future **TwOS** ecosystem by **Flower Technologies**.
 
-**Flower Decoder** is a high-performance, lightweight file decoding engine and a core component of the **TwOS** ecosystem. It is specifically designed to handle proprietary Flower Technologies formats with maximum speed and minimum footprint.
+## 🚀 What's New in v1.3?
+- **Photo Support (.fpf):** Now you can open Flower Photo Files!
+- **External Viewer Integration:** Images are automatically converted to BMP and opened in Windows Photos via `shell32`.
+- **Enhanced Stability:** Based on the rock-solid Alpha text engine.
+- **Security First:** Temporary files are handled in the system `Temp` folder for transparency.
 
-## ✨ Key Features
+## 🛠 Tech Stack
+- **Language:** C++
+- **UI:** Win32 API (Raw)
+- **Compiler:** MinGW-w64 (GCC 15.2+)
+- **OS:** Windows 10/11 (Optimized for Asus TUF Gaming Series)
 
-* **Ultra-Lightweight:** Built with pure Win32 API to ensure near-zero system resource usage.
-* **Proprietary Formats:**
-    * `.ftf` (Flower Text Format) - Fully Supported.
-    * `.fpf` (Flower Photo Format) - Header Decoding (Alpha).
-    * `.fvf` (Flower Video Format) - Coming Soon.
-* **High DPI Awareness:** Crystal-clear UI rendering on 4K and high-resolution displays.
-* **TwOS Vision:** Engineered with the "Fast Boot" philosophy of the upcoming TwOS operating system.
-
-## 🛠️ Build & Installation
-
-The project is developed in **C++** using the **Win32 API**. You will need a C++ compiler (MinGW/g++ recommended).
-
+## 📥 Installation & Compilation
 ```powershell
-# Clone the repository
-git clone [https://github.com/FlowerTechnologies-dev/Flower-Decoder.git](https://github.com/FlowerTechnologies-dev/Flower-Decoder.git)
+g++ src/gui/window.cpp -o build/gui_app.exe -mwindows -lcomdlg32 -lshell32
+```
 
-# Compile the GUI Application
-g++ src/gui/window.cpp -o build/gui_app.exe -mwindows -lcomdlg32
-````
+## ⚠️ Known Issues
+- v1.0 .ftf files may have compatibility issues due to legacy header padding.
+- Turkish character support is being reworked for v2.0.
 
-## 📸 Roadmap
-**v1.1:** Stable GUI and Text (.ftf) integration.
-
-**v1.2 Alpha:** Image (.fpf) header logic and format detection.
-
-**v1.3 (Current Goal):** Internal pixel rendering engine (Native Image Viewer).
-
-**v2.0:** Video (.fvf) playback support and TwOS File Explorer integration.
-
-## 📜 License
-This project is licensed under the GNU General Public License v3.0. We believe in open-source innovation under the Flower Technologies vision.
-
-Developed with ❤️ by *Azeno42* (Flower Technologies)
+Developed by *Azeno42* (Muratcan) Flower Technologies - "The Future of Smart Devices"
